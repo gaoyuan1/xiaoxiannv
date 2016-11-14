@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.number{
+		    position: relative;
+		    width: 95px;
+		    height: 25px;
+		    zoom: 1;
+		    border: 1px solid #ddd;
+		    float: left;
+		    margin: 0 18px;
+		}
+		.number .minus{
+		    float: left;
+		    width: 24px;
+		    height: 25px;
+		    display: inline-block;
+		    cursor: pointer;
+		    opacity: 0.3;
+		    background: url('../images/icon_4.png') no-repeat -3px 2px;
+		    overflow: hidden;
+		}
+		.number .number_1{
+		    width: 44px;
+		    text-align: center;
+		    color: #000;
+		    font-size: 14px;
+		    border: 0;
+		    height: 25px;
+		    border-left: 1px solid #ddd;
+		    border-right: 1px solid #ddd;
+		    float: left;
+		    background: none;
+		}
+		.number .add{
+		    float: left;
+		    width: 24px;
+		    height: 25px;
+		    display: inline-block;
+		    cursor: pointer;
+		    background: url('../images/icon_4.png') no-repeat -3px -78px;
+		    overflow: hidden;
+		}
+	</style>
+	<!-- 商品数量添加 -->
+	<script src="../js/jquery.js"></script>
+	<script>
+		$(function(){
+			var value=parseInt($("#number_1").val());
+			$("#add").click(function(){
+				$("#minus").css("opacity","1");
+				value+=1;
+				$("#number_1").val(value);
+			})
+			$("#minus").click(function(){
+				value-=1;
+				if(value<=0){
+					value=0;
+					$("#minus").css("opacity","0.3");
+				}else{
+
+					$("#number_1").val(value);
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="number">
+		<span class="minus" id="minus"></span>
+		<input class="number_1" type="text" value="1" id="number_1">
+		<span class="add" id="add"></span>
+	</div>
+</body>
+</html>

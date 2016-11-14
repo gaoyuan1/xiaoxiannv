@@ -1,0 +1,501 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "微软雅黑";
+    box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	outline: none;
+}
+a{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+img{
+    cursor: pointer;
+}
+/*搜索框*/
+.search{
+	margin-top: 20px;
+}
+.search .center{
+	width: 1200px;
+	height: 80px;
+	margin: 0 auto;
+}
+.search .center .dian_1{
+    position: relative;
+    width: 507px;
+    background: #fff;
+    height: 80px;
+    float: left;
+}
+.search .center .dian_1 .logo_1{
+    float: left;
+    margin-left: 20px;
+}
+.search .center .dian_1 .logo_1 img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+.search .center .dian_1 .shop{
+    margin-left: 20px;
+    padding-top: 10px;
+    width: 240px;
+    float: left;
+}
+.search .center .dian_1 .shop .shop_1{
+    font-size: 14px;
+    overflow: hidden;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    font-weight: 400;
+}
+.search .center .dian_1 .shop .shop_1 .shop_name{
+    float: left;
+    margin-right: 5px;
+    display: inline-block;
+    max-width: 130px;
+    overflow: hidden;
+    color: #333;
+}
+.search .center .dian_1 .shop .shop_1 p a img{
+    height: 16px;
+}
+.search .center .dian_1 .shop .shop_score{
+    position: relative;
+    width: 240px;
+    z-index: 20;
+    padding-bottom: 30px;
+}
+.search .center .dian_1 .shop .shop_score .shop_score_star{
+    width: 100px;
+}
+.search .center .dian_1 .shop .shop_score .shop_score_star i{
+    display: inline-block;
+    width: 12px;
+    height: 18px;
+    background: url('../images/icon_5.png') no-repeat;
+    background-position: -1px 4px;
+    background-size: 120% 150%;
+}
+.search .center .dian_1 .shop .shop_score .shop_score_star .star{
+    background: url('../images/icon_5.png') no-repeat;
+    background-position: -1px -11px;
+    background-size: 120% 150%;
+}
+.search .center .dian_1 .shop .shop_score span{
+    color: #666;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.search .center .dian_1 .shop .shop_score span b{
+    color: #ef2f23;
+    font-weight: 400;
+    padding-left: 2px;
+    font-size: 12px;
+}
+.search .center .dian_1 .collect_chat{
+    margin-top: 24px;
+    width: 130px;
+    height: 22px;
+    float: left;
+}
+.search .center .dian_1 .collect_chat .collect{
+    padding-left: 10px;
+    background-position: 4px -48px;
+    font-size: 12px;
+    color: #666;
+    width: 58px;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+    background-color: #fff;
+    float: left;
+    border: 1px solid #ddd;
+}
+.search .center .dian_1 .collect_chat .chat{
+    display: block;
+    float: left;
+    width: 50px;
+    height: 22px;
+    border: 1px solid #ddd;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    background-color: #fff;
+    background: url('../images/sp1ku_iezdizbwmi3temjugezdambqmmyde_1x1.gif') no-repeat center center;
+    background-size: 90% 100%;
+}
+.search .center .dian_1 .ce{
+    width: 1px;
+    background: #eee;
+    margin-top: 15px;
+    height: 40px;
+    margin-left: 50px;
+    float: left;
+}
+.search .center .shop_search{
+    margin: 18px 0 0;
+    padding-left: 24px;
+    float: right;
+    width: 600px;
+    height: 30px;
+}
+.search .center .shop_search .shop_search_1{
+    width: auto;
+    position: relative;
+    z-index: 50;
+    float: left;
+}
+.search .center .shop_search .shop_search_1 .kuang{
+    float: left;
+    display: inline-block;
+    background: #fff;
+    vertical-align: middle;
+    width: 400px;
+    height: 30px;
+    overflow: hidden;
+    padding: 0 8px;
+    line-height: 26px;
+    border: 2px solid #ef2f23;
+}
+.search .center .shop_search .shop_search_1 a{
+    vertical-align: middle;
+    background-color: #fff;
+    font-size: 14px;
+    color: #ef2f23;
+    border: 1px solid #ef2f23;
+    height: 28px;
+    width: 72px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 28px;
+    text-align: center;
+    float: right;
+}
+.search .center .shop_search .shop_search_1 .sub{
+    float: left;
+    vertical-align: middle;
+    background-color: #ef2f23;
+    color: #fff;
+    height: 30px;
+    width: 72px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.logo{
+    width: 100%;
+    height: 150px;
+    background: url('../images/logo.jpg') no-repeat center center;
+}
+.nav_bar{
+    line-height: 30px;
+    position: relative;
+    width: 100%;
+    padding-left: 100px;
+    background: rgba(0,0,0,.75);
+}
+.nav_bar ul{
+    height: 30px;
+}
+.nav_bar ul li{
+    float: left;
+    position: relative;
+    font-size: 14px;
+    z-index: 2;
+    padding: 7px 0;
+}
+.nav_bar ul li a{
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+    line-height: 16px;
+    border-right: 1px solid #5c5c5c;
+}
+.nav_bar ul .all a em{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: relative;
+    top: -5px;
+    left: 2px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+.nav_bar ul .all:hover .all_1{
+    display: block;
+}
+.nav_bar ul .all .all_1{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    height: 200px;
+    line-height: 32px;
+    background-color: rgba(0,0,0,0.75);
+}
+.nav_bar ul .all .all_1 li{
+    height: 32px;
+    line-height: 32px;
+}
+.nav_bar ul .all .all_1 li a{
+    color: #fff;
+    font-size: 12px;
+    /*background: url(http://s12.mogujie.cn/pic/130916/7ycvj_kqywuucwkfbfqqkugfjeg5sckzsew_4x7.png) no-repeat 14px 13px!important;*/
+    transition: background-color 0.3s;
+    border: 0;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 26px;
+}
+.banner{
+    position: relative;
+    width: 97.8%;
+    height: 400px;
+    overflow: hidden;
+}
+.banner img{
+    width: 120%;
+    height: 400px;
+}
+.banner a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -22%;
+    z-index: 9999;
+}
+.shop_main{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.shop_main .shop_top ul{
+    width: 100%;
+    height: 33px;
+}
+.shop_main .shop_top ul li{                       
+    height: 33px;
+    line-height: 33px;
+    float: left;
+    margin-right: 30px;
+    font-size: 24px;
+    color: #333;
+}
+.shop_main .shop_top .coupon{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+    height: 140px;
+}
+.shop_main .shop_top .coupon ul{
+    width: 1060px;
+    height: 140px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.shop_main .shop_top .coupon ul li{
+    float: left;
+    width: 340px;
+    height: 120px;
+    background-color: #f3f3f3;
+    padding: 10px;
+    margin-right: 10px;
+}
+.shop_main .shop_top .coupon ul li .box{
+    border: 1px solid #bbb;
+    width: 320px;
+    height: 100%;
+    padding-left: 20px;
+}
+.shop_main .shop_top .coupon ul li .box .box_1{
+    display: block;
+    float: left;
+    height: 77px;
+    line-height: 77px;
+    margin-top: 20px;
+}
+.shop_main .shop_top .coupon ul li .box .box_1 .box_1_1{
+    font-size: 24px;
+    color: #333;
+}
+.shop_main .shop_top .coupon ul li .box .box_1 .box_1_2{
+    font-size: 60px;
+    color: #333;
+}
+.shop_main .shop_top .coupon ul li .box .box_2{
+    display: inline-block;
+    margin-top: 22px;
+    margin-left: 10px;
+}
+.shop_main .shop_top .coupon ul li .box .box_2 p{
+    font-size: 21px;
+    max-width: 190px;
+    overflow: hidden;
+    height: 37px;
+    text-align: center;
+}
+.shop_main .shop_top .coupon ul li .box .box_2 p a img{
+    vertical-align: top;
+}
+/*店内产品*/
+.like_1{
+    width: 1200px;
+    margin: 0 auto;
+}
+.like_1 .like_1_1{
+    width: 220px;
+    height: 410px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin: 0 25px 50px 0;
+}
+.like_1 .like_1_tu .xie{
+    width: 220px;
+    height: 330px;
+}
+.like_1 .like_1_zi .kaixue{
+    line-height: 20px;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+    margin-top: 6px;
+    font-size: 14px;
+    width: 100%;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    -webkit-text-overflow:ellipsis;
+    -moz-text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.like_1 .like_1_zi .liangpin{
+    margin-right: 5px;
+    height: 18px;
+}
+.like_1 .like_1_di{
+    margin-top: 4px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    color: #333;
+    width: 100%;
+}
+.like_1 .like_1_di b{
+    color: #333;
+    font-size: 16px;
+}
+.like_1 .like_1_di span{
+    float: right;
+    font-size: 12px;
+    color: #999;
+}
+.like_1 .like_1_di span .xing{
+    height: 15px;
+    width: 16px;
+    vertical-align: -2px;
+    margin-left: 4px;
+}
+.like_1 .like_1_2{
+    width: 220px;
+    height: 410px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 50px 0;
+}
+/*页尾*/
+.foot{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 20px;
+    font-size: 12px;
+    margin-top: 90px;
+    border-top: 1px solid #ddd;
+}
+.foot .foot_center{
+    width: 1200px;
+    height: 220px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    padding-top: 30px;
+}
+.foot .foot_ce{
+    width: 246px;
+    float: left;
+}
+.foot .foot_ce .foot_ce_logo{
+    display: block;
+    width: 246px;
+    height: 38px;
+    background: url('../images/upload_37che13j0d67379a6776fi6kbk71k_224x70.png') no-repeat;
+    background-size: 120px 38px;
+}
+.foot .foot_ce p{
+    height: 16px;
+    line-height: 16px;
+    margin-top: 5px;
+    color: #999;
+}
+.foot .foot_ce .xuke{
+    height: 32px;
+}
+.foot .foot_ce p a{
+    color: #999;
+    cursor: pointer;
+}
+.foot .foot_ce p img{
+    vertical-align: middle;
+}
+.foot .company{
+    width: 80px;
+    float: left;
+    margin-left: 90px;
+    padding-bottom: 15px;
+}
+.foot h3{
+    font-size: 12px;
+    color: #000;
+    padding-bottom: 10px;
+}
+.foot .company ul{
+    width: 80px;
+}
+.foot .company ul li{
+    height: 22px;
+}
+.foot .company ul li a{
+    font-size: 12px;
+    color: #666;
+}
+.foot .company ul li a:hover{
+    text-decoration: underline;
+}
+.foot .authorize{
+    width: 248px;
+    float: left;
+    margin-left: 90px; 
+}
+.foot .authorize .pingan{
+    display: block;
+    width: 164px;
+    height: 28px;
+    background: url('../images/split.png') no-repeat -240px -50px;
+    float: left;
+}
+.foot .authorize .kexin{
+    display: block;
+    width: 84px;
+    height: 28px;
+    background:url('../images/split.png') no-repeat -400px -50px;
+    float: left;
+}

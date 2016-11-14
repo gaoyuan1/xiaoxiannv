@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/shangpin.css" />
+	<script src="../js/jquery.js"></script>
+	<script>
+		$(function(){
+			$.fn.magnifying = function(){
+				var that = $(this),
+				$imgCon = that.find('.big'),//正常图片容器
+				$Img = $imgCon.find('img'),//正常图片，还有放大图片集合
+				$Drag = that.find('.fangdajing'),//拖动滑动容器
+				$show = that.find('.datu'),//放大镜显示区域
+				$showIMg = $show.find('#da'),//放大镜图片
+				$ImgList = that.find('.small .small_box ul li img'),
+				multiple = $show.width()/$Drag.width();
+
+				$imgCon.mousemove(
+					function(e){
+						//计算盒子内的鼠标位置：
+						var x = e.pageX - $("div.big").offset().left;
+						var y = e.pageY - $("div.big").offset().top;
+						//验收，保证放大镜，不能移出盒子
+						if(x < 75){
+							x = 75;
+						}
+						if(y < 75){
+							y = 75;
+						}
+						if(x > 400 - 75){
+							x = 400 - 75;
+						}
+						if(y > 600 - 75){
+							y = 600 - 75;
+						}
+						//让放大镜跟随鼠标：
+						$Drag.css(
+							{
+								"left":x - 75,
+								"top":y - 75
+							}	
+						);
+						//让大图的background-position，等比例变化
+						var beijingx = -(400/150) * (x - 75);
+						var beijingy = -(600/150) * (y - 75);
+						$show.css("background","url(" + $Img.attr('src') + ")");
+						$show.css("background-size","300% 300%");
+						$show.css("background-position",beijingx + "px " + beijingy + "px");
+					}
+				);		
+				$imgCon.mouseenter(
+					function(){
+						$(".fangdajing").show();
+						$(".datu").show();
+					}
+				)		
+				$imgCon.mouseleave(
+					function(){
+						$(".fangdajing").hide();
+						$(".datu").hide();
+					}
+				)
+				$ImgList.click(function(){
+					var NowSrc = $(this).data('bigimg');
+					$Img.attr('src',NowSrc);
+					$(this).parent().addClass('small-active').siblings().removeClass('small-active');
+				});
+			}
+			$(".picture").magnifying();	
+		})
+	</script>
+</head>
+<body>
+	<div class="product">
+		<div class="product_center">
+			<div class="product_top">
+				<div class="product_top_main">
+					<div class="picture">
+						<div class="big">
+							<div class="fangdajing"></div>
+							<img style="opacity:1;" src="../images/27360838_5ilf77j5b97gffj0dekl26khcf7l3_640x960.jpg_750x999.jpg">
+						</div>
+						<div class="datu"></div>
+						<div class="small">
+							<div class="small_box">
+								<ul>
+									<li class="small-active">
+										<img src="../images/27360838_6ii71jja7479a90e0i78ela0i057c_640x960.jpg_100x100.jpg" data-bigimg="../images/27360838_5ilf77j5b97gffj0dekl26khcf7l3_640x960.jpg_750x999.jpg">
+									</li>
+									<li>
+										<img src="../images/upload_0cbc278bccj748haf9d07ll830g2h_1062x1881.jpg_100x100.jpg" data-bigimg="../images/27360838_1bf08aec025064af5iccl346883ki_640x960.jpg_750x999.jpg">
+									</li>
+									<li>
+										<img src="../images/27360838_1dg3cldkc1g1ei2ji0h1f1jca0091_750x500.jpg_750x999.jpg" data-bigimg="../images/27360838_1dg3cldkc1g1ei2ji0h1f1jca0091_750x500.jpg_750x999.jpg">
+									</li>
+									<li>
+										<img src="../images/27360838_2b98d30k6a7j9a05eeai04989g4e8_750x500.jpg_750x999.jpg" data-bigimg="../images/27360838_2b98d30k6a7j9a05eeai04989g4e8_750x500.jpg_750x999.jpg">
+									</li>
+									<li>
+										<img src="../images/27360838_4a44c5l9ec4gl6i0f5elg4kfklb9k_750x500.jpg_750x999.jpg" data-bigimg="../images/27360838_4a44c5l9ec4gl6i0f5elg4kfklb9k_750x500.jpg_750x999.jpg">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

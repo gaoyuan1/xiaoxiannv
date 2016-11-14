@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.kongbai{
+			height: 300px;
+		}
+		.shopping_cart{
+		    position: relative;
+		    color: #333;
+		    border: 1px solid #ddd;
+		    width: 200px;
+		    display: inline-block;
+		    text-align: center;
+		    font-size: 20px;
+		    background: #fff;
+		    height: 50px;
+		    line-height: 50px;
+		}
+	</style>
+	<script src="../js/jquery.js"></script>	
+	<script src="../js/parabola.js"></script>
+	<script>
+		// 加入购物车抛物线
+		$(function(){
+		    var bool = new Parabola({
+		        el: "#gouwuche1",
+		        //速率和
+		        offset: [500, 50],
+		        curvature: 0.005,
+		        duration: 1000,
+		        callback:function(){
+		            // alert("完成后回调")
+		        },
+		        stepCallback:function(x,y){
+		            // console.log(x,y);
+		            $("<div>").appendTo("body").css({
+		                "position": "absolute",
+		                "top": this.elOriginalTop + y,
+		                "left":this.elOriginalLeft + x,
+		                "background-color":"#CDCDCD",
+		                "width":"5px",
+		                "height":"5px",
+		                "border-radius": "5px"
+		            });
+		        }
+		      })
+			$("#gouwuche1").css({"width":"20px",
+					"height":"20px",
+					"position":"absolute",
+					"top":"15px",
+					"left":"10px",
+					"opacity":"0"
+
+			})
+		    $("#gouwuche1").find("img").css({"height":"100%","width":"100%"});
+			
+		    $("#gouwuche").click(function(event){
+				$("#gouwuche1").css("opacity","1");
+				event.preventDefault();
+		        bool.start(); 
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="kongbai"></div>	
+	<a class="shopping_cart" id="gouwuche">加入购物车
+		<div id="gouwuche1">
+			<img src="../images/27360838_6ii71jja7479a90e0i78ela0i057c_640x960.jpg_100x100.jpg">
+		</div>
+	</a>
+</body>
+</html>

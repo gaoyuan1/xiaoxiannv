@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	list-style: none;
+	outline: none;
+}
+img{
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.box{
+	position: relative;
+	top: 100px;
+	width: 900px;
+	height: 500px;
+	border: 1px solid #eee;
+	margin: 0 auto;
+}
+.box .touxiang{
+	float: left;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: #ff1877;
+	margin-top: 10%;
+	margin-left: 30%;
+}
+.box .touxiang img{
+	margin: 25px 0 0 30px;
+}
+.box .left{
+	float: left;
+	width: 300px;
+	margin-top: 12%;
+	color: #888;
+}
+.box .left .p1,.box .left .p2{
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.box .bottom{
+	float: left;
+	width: 300px;
+	margin-left: 30%;
+	margin-top: 15%;
+}
+.box .bottom input{
+	width: 300px;
+	height: 40px;
+	border: 1px solid #999;
+}
+.box .bottom button{
+	width: 100px;
+	height: 40px;
+	background-color: #ff1877;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+	margin: 10px 0 0 100px;
+}
+span{
+	float: left;
+	width: 300px;
+	height: 20px;
+	color: #f00;
+}

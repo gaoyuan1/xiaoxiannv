@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<script>
+		onload = function(){
+			var phone = document.getElementById("tel");
+			var tixing = document.getElementById("tixing");
+			var flag0 = false;
+			phone.onblur = function(){
+		        var ph = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+		        if(phone.value.match(ph)){
+		        	tixing.style.display="none";
+		        	flag0 = true;
+		        }else{
+		            tixing.style.display="block";
+		            tixing.innerHTML = "请填写正确的手机号";
+		            flag0 = false;
+		        }
+		        if(phone.value==""){
+		        	tixing.style.display="block";
+		            tixing.innerHTML = "请输入手机号码";
+		        }
+		    }
+		    phone.onfocus = function(){
+		        tixing.style.display="none";
+		        if(phone.value!=""){
+		        	tixing.style.display="none";
+		        }
+		    }
+		}
+	</script>
+</head>
+<body>
+	<p id="tixing">请输入手机号码</p>
+	<input id="tel" type="text" placeholder="手机号码">
+</body>
+</html>

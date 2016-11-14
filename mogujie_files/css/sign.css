@@ -1,0 +1,135 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "微软雅黑";
+    box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	outline: none;
+}
+a{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+img{
+    cursor: pointer;
+}
+.sign{
+	width: 900px;
+	margin: 0 auto;
+	padding: 27px 0 33px;
+    height: 600px;
+    min-height: 580px;
+}
+.logo img{
+	display: inline-block;
+    width: 160px;
+    height: 50px;
+}
+.content{
+	height: 500px;
+	padding-top: 40px;
+}
+.content .contentLeft{
+	width: 400px;
+    padding: 20px 0 0 40px;
+    float: left;
+} 
+.content .contentRight{
+	width: 370px;
+    float: right;
+    padding: 0 0 30px 40px; 
+	border: 1px solid #DCDCDC;	
+}
+.content .contentRight .contentRight1{
+	margin-left: -40px;
+}
+.content .contentRight h3{
+	font-size: 16px;
+    color: #333;
+    padding: 0px 40px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+} 
+.content .contentRight .contentRight2{
+	margin-top: 20px;
+}
+.content .contentRight .contentRight2 .contentRight2_1{
+	position: relative;
+    margin-bottom: 15px;
+    float: left;
+}
+.content .contentRight .contentRight2 .contentRight2_1 .name{
+    border: 1px solid #ccc;
+    height: 28px;
+    width: 290px;
+    padding: 0px 6px;
+}
+.content .contentRight .contentRight2 .contentRight2_1 .check{
+    float: left;
+}
+.content .contentRight .contentRight2 .contentRight2_1 span{
+	font-size: 13px;
+    float: left;
+    color: #666;
+    padding-right: 134px;
+}
+#wang{
+    display: block;
+    font-size: 12px;
+    color: #666;
+    float: right;
+    padding-right: 20px;
+}
+#sub1{
+    width: 291px;
+    height: 30px;
+    background: #ff1877;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+}
+#denglu{
+    font-size: 12px;
+    float: left;
+    margin-right: 40px;
+    color: #666;
+    text-decoration: underline;
+}
+#denglu2{
+	font-size: 12px;
+	float: right;
+    margin-right: 40px;
+    color: #666;
+    text-decoration: underline;
+}
+.footer{
+	height: 300px;
+	padding-top: 150px;
+}
+.footer .footerLeft{
+	float: left;
+}
+.footer .footerLeft ul{
+	padding-right: 70px;
+	float: left;
+}
+.footer .footerLeft h3{
+	font-size: 14px;
+	padding: 12px 0px;
+	color: #333333;
+}
+.footer .footerLeft li{
+	font-size: 12px;
+	padding-bottom: 8px;
+}
+.footer .footerLeft li a{
+	color: #666666;
+}
+.footer .footerLeft .xian:hover{
+	text-decoration: underline;
+}

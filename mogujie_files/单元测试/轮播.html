@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.banner{
+		    width: 800px;
+		    height: 510px;
+		    margin: 0 auto;
+		    position: relative;
+		}
+		.banner .banner_1{
+		    display: block;
+		    width: 800px;
+		    height: 510px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 9999;
+		}
+	</style>
+	<script src="../js/jquery.js"></script>
+	<script>
+		var num=0;
+		var timer = setInterval(teo,1000);
+		//呼吸轮播
+		function teo(){  
+		    if(!$(".banner .banner_1").is(":animated")){  
+		        $(".banner .banner_1").eq(num).fadeOut(1000);  
+		        if(num == $(".banner .banner_1").length -1){  
+		            num = 0;  
+		        }  
+		        else{  
+		            num++;  
+		        } 
+		        $(".banner .banner_1").eq(num).fadeIn(1000); 
+		        $(".banner .banner_1").eq(num).addClass("current").siblings().removeClass("current");  
+		    }  
+		}  
+		$(function(){
+			$(".banner .banner a img").hover(function(){
+				clearInterval(timer);
+			},function(){
+				timer = setInterval(teo,1000);
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="banner">
+		<a href="index_shangpin.html" class="banner_1"><img src="../images/p6_5c7kkeig0i0ii14ell5bf8dfe4i2d_800x480.jpg"></a>
+		<a href="index_shangpin.html" class="banner_1"><img src="../images/upload_1i0a05dhl0kja951fdel06i7cbe5h_800x480.jpg"></a>
+		<a href="index_shangpin.html" class="banner_1"><img src="../images/upload_7lbee4064i4b33khkg3g2706l4kji_800x480.jpg"></a>
+		<a href="index_shangpin.html" class="banner_1"><img src="../images/a4_4l2lgh47cflhck3ckib6cjhi84h2e_800x480.jpg"></a>
+	</div>
+</body>
+</html>
