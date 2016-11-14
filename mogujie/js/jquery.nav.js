@@ -1,0 +1,23 @@
+;(function($){
+	$.fn.extend({
+		"nav":function(color){
+			$(this).find(".nav").css({
+				"list-style":"none",
+				"margin":0,
+				"padding":0,
+				"color":color,
+				"display":"none"
+			});
+			$(this).css({
+                "list-style":"none",
+                "color":"green"
+            })
+			$(this).find(".nav").parent().hover(function(){
+				$(this).find(".nav").stop().slideDown(400);
+			},function(){
+				$(this).find(".nav").stop().slideUp(400);
+			});
+			return this;
+		}
+	});	
+})(jQuery);
